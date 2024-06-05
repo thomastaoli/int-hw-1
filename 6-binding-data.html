@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <svg
+      width="800"
+      height="200"
+      style="background-color: rgb(242, 242, 242)"
+    ></svg>
+  </body>
+
+  <!-- Paste your d3 library link here -->
+  <script src="https://d3js.org/d3.v7.min.js"></script>
+
+  <script>
+    // Write your JavaScript code here
+    var dataset = [5, 10, 15, 20, 25];
+
+    d3.select("svg")
+      .append("circle")
+      .attr("cx", 50)
+      .attr("cy", 50)
+      .attr("r", dataset[0])
+      .attr("fill", "orange")
+      .data(dataset)
+      .join("circle");
+  </script>
+</html>
